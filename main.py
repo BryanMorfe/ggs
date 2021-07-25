@@ -27,12 +27,12 @@ if __name__ == '__main__':
     ggs = Ggs(25000)
 
     add_entries(ggs, [
-        {'name': 'casi', 'points': 2180, 'gifts': 1},
-        {'name': 'venom', 'points': 2340, 'gifts': 0},
-        {'name': 'mistige', 'points': 3180, 'gifts': 2},
-        {'name': 'drogon', 'points': 1180, 'gifts': 0},
-        {'name': 'viserion', 'points': 2755, 'gifts': 0},
-        {'name': 'shall-not-be-named', 'points': 390, 'gifts': 1},
+        {'name': 'Bran', 'points': 2180, 'gifts': 1},
+        {'name': 'Sansa', 'points': 2340, 'gifts': 0},
+        {'name': 'Arya', 'points': 3180, 'gifts': 2},
+        {'name': 'Robb', 'points': 1180, 'gifts': 0},
+        {'name': 'Jon', 'points': 2755, 'gifts': 3},
+        {'name': 'Rickon', 'points': 390, 'gifts': 1},
     ])
 
     table = ggs.get_prob_table()
