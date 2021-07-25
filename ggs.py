@@ -32,7 +32,7 @@ class Ggs(object):
         all_pct_dist = []
         for i in range(len(self.prob_table)):
             self.prob_table[i]['probability'] /= total_sum
-            t = self.prob_table[i]['gifts'] / GgsConstants.GiftAdjustDivisor.value
+            t = min(0.998, self.prob_table[i]['gifts'] / GgsConstants.GiftAdjustDivisor.value)
             all_pct_dist.append(t * self.prob_table[i]['probability'])
 
         # Calculate the adjustment needed per entry for gifts given
@@ -54,7 +54,6 @@ class Ggs(object):
 
     def get_prob_table(self):
         if self.prob_table is None:
-            print('Calculating prob table')
             self._calc_prob_table()
 
         return self.prob_table
